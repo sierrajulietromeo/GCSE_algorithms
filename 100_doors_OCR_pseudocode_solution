@@ -1,0 +1,39 @@
+
+// Follows OCR GCSE pseudocode style guide
+
+
+increaseStep = 1    // step that steps through the array 1-100
+index = 0           // sets initial index value
+array doors[100]    // creates an array called doors size 100 (remember thats 0-99 positions in an array)
+
+
+// this for loop sets the initial value of each position in the array to be closed
+for index from 0 to 99
+	doors[index] = "closed"
+next index
+
+
+// do this while loop while increasestep less than 100
+while increaseStep <= 100
+
+    // Go through the array n times, where n is the value of increaseStep
+	for index=0 to 99 by increaseStep
+
+        // if an element in the array equals "closed", set it to "open", else it must be open so set it to closed.
+		if doors[index] == "closed"
+			doors[index] = "open"
+		else 
+			doors[index] = "closed"
+
+	next index
+
+	increaseStep = increaseStep  + 1    //  next time it goes through the array it will step through by this value. (1,2,3,4,5,6,7....to 100)
+
+endwhile
+		
+for index from 0 to 99
+	print "Door number" index " is " doors[index] = "closed"
+next index
+
+
+
