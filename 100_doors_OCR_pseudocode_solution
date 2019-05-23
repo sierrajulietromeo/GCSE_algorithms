@@ -32,7 +32,7 @@ while increaseStep <= 100
 endwhile
 		
 for index from 0 to 99
-	print "Door number" index " is " doors[index] = "closed"
+	print "Door number" index " is " doors[index]
 next index
 
 
