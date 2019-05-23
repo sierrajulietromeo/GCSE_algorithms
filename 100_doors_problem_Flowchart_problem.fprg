@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="steve"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-05-23 11:09:05 AM"/>
+        <attribute name="created" value="c3RldmU7QURBLUxUU1RBLTAyNDsyMDE5LTA1LTE0OzA4OjQxOjUyIEFNOzI2NTI="/>
+        <attribute name="edited" value="c3RldmU7QURBLUxUU1RBLTAyNDsyMDE5LTA1LTIzOzExOjA5OjA1IEFNOzY7Mjc2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="doorList" type="String" array="True" size="100"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Creates a doorList array of 100 elements and the loops sets the contents of each element to be &quot;closed&quot;."/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <assign variable="doorList[i]" expression="&quot;closed&quot;"/>
+            </for>
+            <comment text="Declares an integer for the stepSize. (This will change each time (first step 1, second step 2, 3rd step 3 all the way..."/>
+            <declare name="stepSize" type="Integer" array="False" size=""/>
+            <assign variable="stepSize" expression="0"/>
+            <for variable="i" start="0" end="99" direction="inc" step="1">
+                <assign variable="stepSize" expression="stepSize+1"/>
+                <declare name="k" type="Integer" array="False" size=""/>
+                <comment text="This loop iterates through the array for the current stepsize."/>
+                <for variable="k" start="0" end="99" direction="inc" step="stepSize">
+                    <comment text="If the door is open, set it to be closed.&#13;&#10;If the door is not open, it must be closed. So set it to open."/>
+                    <if expression="doorList[k] == &quot;open&quot;">
+                        <then>
+                            <assign variable="doorList[k]" expression="&quot;closed&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="doorList[k]" expression="&quot;open&quot;"/>
+                        </else>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
