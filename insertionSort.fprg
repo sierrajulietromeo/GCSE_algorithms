@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="steve"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-05-15 04:29:16 PM"/>
+        <attribute name="created" value="c3RldmU7QURBLUxUU1RBLTAyNDsyMDE5LTA1LTE1OzA0OjA1OjM2IFBNOzI2NjY="/>
+        <attribute name="edited" value="c3RldmU7QURBLUxUU1RBLTAyNDsyMDE5LTA1LTE1OzA0OjI5OjE2IFBNOzE7Mjc3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="insertionArray" type="Integer" array="True" size="8"/>
+            <assign variable="insertionArray[0]" expression="5"/>
+            <assign variable="insertionArray[1]" expression="7"/>
+            <assign variable="insertionArray[2]" expression="2"/>
+            <assign variable="insertionArray[3]" expression="6"/>
+            <assign variable="insertionArray[4]" expression="8"/>
+            <assign variable="insertionArray[5]" expression="4"/>
+            <assign variable="insertionArray[6]" expression="1"/>
+            <assign variable="insertionArray[7]" expression="3"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <declare name="pointerOne" type="Integer" array="False" size=""/>
+            <assign variable="pointerOne" expression="0"/>
+            <declare name="pointerTwo" type="Integer" array="False" size=""/>
+            <assign variable="pointerTwo" expression="1"/>
+            <while expression="pointerOne &lt; Size(insertionArray)-1">
+                <if expression="insertionArray[pointerTwo] &lt; insertionArray[pointerOne]">
+                    <then>
+                        <assign variable="temp" expression="insertionArray[pointerOne]"/>
+                        <assign variable="insertionArray[pointerOne]" expression="insertionArray[pointerTwo]"/>
+                        <assign variable="insertionArray[pointerTwo]" expression="temp"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="pointerOne" expression="pointerTwo"/>
+                <assign variable="pointerTwo" expression="pointerTwo + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
